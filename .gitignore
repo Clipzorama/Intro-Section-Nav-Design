@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+mock.html
+style-guide.md
+README-template.md
