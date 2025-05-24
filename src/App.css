@@ -17,4 +17,5 @@
 
 body {
   background-color: var(--Almost-White);
+  min-height: 100vh;
 }
