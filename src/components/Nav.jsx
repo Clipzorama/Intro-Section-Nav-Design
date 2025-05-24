@@ -25,7 +25,9 @@ function Nav() {
             <ul className="nav-links">
                 {/* Putting the whole feature dropDown in this one li element */}
                 <li className='dropdown-parent'
+                    // user hovers their mouse over the <li> element
                     onMouseEnter={() => setDropDown('features')}
+                    // Negation of this
                     onMouseLeave={() => setDropDown(null)}>
                     <span className="dropdown-toggle">
                         Features <img src={openDropDown === 'features' ? ArrowDown : ArrowUp} alt="Arrow icon for dropdown" />
