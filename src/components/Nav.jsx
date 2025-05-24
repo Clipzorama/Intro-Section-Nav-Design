@@ -22,42 +22,49 @@ function Nav() {
     return (
         <div className="nav-container">
             <img src={Logo} alt="Logo Symbol" />
-            <ul className="nav-links">
-                {/* Putting the whole feature dropDown in this one li element */}
-                <li className='dropdown-parent'
-                    // user hovers their mouse over the <li> element
-                    onMouseEnter={() => setDropDown('features')}
-                    // Negation of this
+            <div className="nav-left">
+                <ul className="nav-links">
+                    {/* Putting the whole feature dropDown in this one li element */}
+                    <li className='dropdown-parent'
+                        // user hovers their mouse over the <li> element
+                        onMouseEnter={() => setDropDown('features')}
+                        // Negation of this
+                        onMouseLeave={() => setDropDown(null)}>
+                        <span className="dropdown-toggle">
+                            Features <img src={openDropDown === 'features' ? ArrowDown : ArrowUp} alt="Arrow Icon for Dropdown" />
+                        </span>
+                        {openDropDown === 'features' && (
+                            <div className="dropdown-menu">
+                                <div><img src={ToDo} alt="Todo Symbol" />Todo List</div>
+                                <div><img src={Calendar} alt="Todo Symbol" />Todo List</div>
+                                <div><img src={Reminder} alt="Todo Symbol" />Todo List</div>
+                                <div><img src={Planning} alt="Todo Symbol" />Todo List</div>
+                            </div>
+                        )}
+                    </li>
+                    <li 
+                    className="dropdown-parent"
+                    onMouseEnter={() => setDropDown('company')}
                     onMouseLeave={() => setDropDown(null)}>
-                    <span className="dropdown-toggle">
-                        Features <img src={openDropDown === 'features' ? ArrowDown : ArrowUp} alt="Arrow Icon for Dropdown" />
-                    </span>
-                    {openDropDown === 'features' && (
-                        <div className="dropdown-menu">
-                            <div><img src={ToDo} alt="Todo Symbol" />Todo List</div>
-                            <div><img src={Calendar} alt="Todo Symbol" />Todo List</div>
-                            <div><img src={Reminder} alt="Todo Symbol" />Todo List</div>
-                            <div><img src={Planning} alt="Todo Symbol" />Todo List</div>
-                        </div>
-                    )}
-                </li>
-                <li 
-                className="dropdown-parent"
-                onMouseEnter={() => setDropDown('company')}
-                onMouseLeave={() => setDropDown(null)}>
-                    <span className="dropdown-toggle">
-                        Company <img src={openDropDown === 'company' ? ArrowDown : ArrowUp} alt="Arrow Icon for Dropdown"/>
-                    </span>
-                    {openDropDown === 'company' && (
-                        <div className="dropdown-menu">
-                            <div>History</div>
-                            <div>Our Team</div>
-                            <div>Blog</div>
-                        </div>
-                    )}
-
-                </li>
-            </ul>
+                        <span className="dropdown-toggle">
+                            Company <img src={openDropDown === 'company' ? ArrowDown : ArrowUp} alt="Arrow Icon for Dropdown"/>
+                        </span>
+                        {openDropDown === 'company' && (
+                            <div className="dropdown-menu">
+                                <div>History</div>
+                                <div>Our Team</div>
+                                <div>Blog</div>
+                            </div>
+                        )}
+                    </li>
+                    <li>Careers</li>
+                    <li>About</li>
+                </ul>
+            </div>
+            <div className="nav-right">
+                <button className="login-btn">Login</button>
+                <button className="register-btn">Register</button>
+            </div>
         </div>
 
     );
