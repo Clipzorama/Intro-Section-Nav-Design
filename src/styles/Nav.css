@@ -7,7 +7,7 @@
 
 .nav-left {
     display: flex;
-    gap: 5rem;
+    gap: 4.5rem;
 }
 
 
@@ -18,7 +18,8 @@
 }
 
 .nav-links > li {
-    color: var(--Almost-Grey);
+    color: var(--Medium-Gray);
+    font-weight: 500;
 }
 
 .dropdown-menu {
@@ -29,17 +30,12 @@
     background-color: white;
     padding: 2rem;
     margin-top: 1.5rem;
-    box-shadow: 0 4px 20px var(--Almost-Black) ;
+    box-shadow: 0 8px 40px var(--Medium-Gray) ;
 }
 
 .dropdown-parent:nth-of-type(1) .dropdown-menu {
-    left: 5rem;
+    left: 8.4rem;
 }
-
-
-
-
-
 
 .nav-right {
     display: flex;

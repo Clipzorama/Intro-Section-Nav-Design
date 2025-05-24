@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import '../styles/Nav.css';
 
 // Importing all important pictures for the nav and the dropdown for everything
 import Logo from '../assets/images/logo.svg'
@@ -9,7 +10,6 @@ import ToDo from '../assets/images/icon-todo.svg';
 import Calendar from '../assets/images/icon-calendar.svg'
 import Reminder from '../assets/images/icon-reminders.svg'
 import Planning from '../assets/images/icon-planning.svg'
-import '../styles/Nav.css';
 
 
 
