@@ -63,10 +63,10 @@ function Nav() {
                         <li>About</li>
                     </ul>
                 </div>
-            <div className="nav-right">
-                <button className="login-btn">Login</button>
-                <button className="register-btn">Register</button>
-            </div>
+                <div className="nav-right">
+                    <button className="login-btn">Login</button>
+                    <button className="register-btn">Register</button>
+                </div>
             </div>
         </div>
     );
