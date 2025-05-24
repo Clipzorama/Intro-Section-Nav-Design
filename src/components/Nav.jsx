@@ -21,51 +21,52 @@ function Nav() {
 
     return (
         <div className="nav-container">
-            <div className="nav-left">
-            <img src={Logo} alt="Logo Symbol" />
-
-                <ul className="nav-links">
-                    {/* Putting the whole feature dropDown in this one li element */}
-                    <li className='dropdown-parent'
-                        // user hovers their mouse over the <li> element
-                        onMouseEnter={() => setDropDown('features')}
-                        // Negation of this
+            <img src={Logo} alt="Logo Symbol" className="logo" />
+            <div className="mobile-nav">
+                <div className="nav-left">
+                    <ul className="nav-links">
+                        {/* Putting the whole feature dropDown in this one li element */}
+                        <li className='dropdown-parent'
+                            // user hovers their mouse over the <li> element
+                            onMouseEnter={() => setDropDown('features')}
+                            // Negation of this
+                            onMouseLeave={() => setDropDown(null)}>
+                            <span className="dropdown-toggle">
+                                Features <img src={openDropDown === 'features' ? ArrowDown : ArrowUp} alt="Arrow Icon for Dropdown" />
+                            </span>
+                            {/* A nice way to add dropdown menus instead of adding an ::after pseudo element */}
+                            {openDropDown === 'features' && (
+                                <div className="dropdown-menu">
+                                    <div><img src={ToDo} alt="Todo Symbol" />Todo List</div>
+                                    <div><img src={Calendar} alt="Calendar Symbol" />Calendar</div>
+                                    <div><img src={Reminder} alt="Reminder Symbol" />Reminders</div>
+                                    <div><img src={Planning} alt="Planning Symbol" />Planning</div>
+                                </div>
+                            )}
+                        </li>
+                        <li 
+                        className="dropdown-parent"
+                        onMouseEnter={() => setDropDown('company')}
                         onMouseLeave={() => setDropDown(null)}>
-                        <span className="dropdown-toggle">
-                            Features <img src={openDropDown === 'features' ? ArrowDown : ArrowUp} alt="Arrow Icon for Dropdown" />
-                        </span>
-                        {/* A nice way to add dropdown menus instead of adding an ::after pseudo element */}
-                        {openDropDown === 'features' && (
-                            <div className="dropdown-menu">
-                                <div><img src={ToDo} alt="Todo Symbol" />Todo List</div>
-                                <div><img src={Calendar} alt="Calendar Symbol" />Calendar</div>
-                                <div><img src={Reminder} alt="Reminder Symbol" />Reminders</div>
-                                <div><img src={Planning} alt="Planning Symbol" />Planning</div>
-                            </div>
-                        )}
-                    </li>
-                    <li 
-                    className="dropdown-parent"
-                    onMouseEnter={() => setDropDown('company')}
-                    onMouseLeave={() => setDropDown(null)}>
-                        <span className="dropdown-toggle">
-                            Company <img src={openDropDown === 'company' ? ArrowDown : ArrowUp} alt="Arrow Icon for Dropdown"/>
-                        </span>
-                        {openDropDown === 'company' && (
-                            <div className="dropdown-menu">
-                                <div>History</div>
-                                <div>Our Team</div>
-                                <div>Blog</div>
-                            </div>
-                        )}
-                    </li>
-                    <li>Careers</li>
-                    <li>About</li>
-                </ul>
-            </div>
+                            <span className="dropdown-toggle">
+                                Company <img src={openDropDown === 'company' ? ArrowDown : ArrowUp} alt="Arrow Icon for Dropdown"/>
+                            </span>
+                            {openDropDown === 'company' && (
+                                <div className="dropdown-menu">
+                                    <div>History</div>
+                                    <div>Our Team</div>
+                                    <div>Blog</div>
+                                </div>
+                            )}
+                        </li>
+                        <li>Careers</li>
+                        <li>About</li>
+                    </ul>
+                </div>
             <div className="nav-right">
                 <button className="login-btn">Login</button>
                 <button className="register-btn">Register</button>
+            </div>
             </div>
         </div>
     );
