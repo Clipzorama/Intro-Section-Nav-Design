@@ -15,10 +15,16 @@ function Content() {
                 <h1>Make remote work</h1>
                 <p>Get your team in sync, no matter your location. Streamline processes, 
                 create team rituals, and watch productivity soar.</p>
+                <button className="learn-btn">Learn More</button>
                 <div className="company-ads">
-
+                    <img src={Databiz} alt="Databiz Logo" />
+                    <img src={Audiophile} alt="Audiophile Logo" />
+                    <img src={Meet} alt="Meet Logo" />
+                    <img src={Maker} alt="Maker Logo" />
                 </div>
-
+            </div>
+            <div className="right-content">
+                <img src={MainLogo} alt="Hero Logo" />
             </div>
         </div>
     );

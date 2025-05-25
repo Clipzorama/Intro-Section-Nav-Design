@@ -1,0 +1,27 @@
+
+/* Left side is for the rest of the content on the page */
+
+.content-container {
+    display: flex;
+    padding: 5rem;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+
+
+
+/* Right Side is for the image */
+
+.right-content {
+    width: 50%;
+}
+
+.right-content > button {
+
+}
