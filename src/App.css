@@ -19,3 +19,10 @@ body {
   background-color: var(--Almost-White);
   min-height: 100vh;
 }
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}

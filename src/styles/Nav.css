@@ -1,7 +1,7 @@
 .nav-container {
     display: flex;
     align-items: center;
-    padding: 2rem 3.5rem;
+    padding: 2rem 3rem;
     gap: 4.5rem;
     width: 100%;
 }

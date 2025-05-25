@@ -2,26 +2,41 @@
 /* Left side is for the rest of the content on the page */
 
 .content-container {
+    flex: 1;
     display: flex;
-    padding: 5rem;
+    padding: 1rem 7rem 3rem 11rem;
+    height: 100%;
+    gap: 5%;
 }
 
 .left-content {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 47%;
 }
 
+.left-content > h1 {
+    font-size: 5rem;
+    color: var(--Almost-Black);
+    margin-top: 9rem;
 
+}
 
-
+.company-ads {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
 
 /* Right Side is for the image */
-
 .right-content {
-    width: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
-.right-content > button {
-
+.right-content > img {
+  width: 500px; /* Adjust this value */
+  height: auto;
+  object-fit: contain;
 }
