@@ -19,7 +19,11 @@
     font-size: 5rem;
     color: var(--Almost-Black);
     margin-top: 9rem;
+}
 
+.left-content > p {
+    margin-top: 2rem;
+    color: var(--Medium-Gray);
 }
 
 .company-ads {
