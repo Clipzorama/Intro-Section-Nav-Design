@@ -32,7 +32,7 @@
     gap: 3rem;
 }
 
-/* Right Side is for the image */
+/* Right Side is for the image. mostly just the img element. */
 .right-content {
   width: 50%;
   display: flex;
