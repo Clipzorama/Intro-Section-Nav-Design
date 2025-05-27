@@ -32,7 +32,7 @@ function Nav() {
                             // Negation of this
                             onMouseLeave={() => setDropDown(null)}>
                             <span className="dropdown-toggle">
-                                Features <img src={openDropDown === 'features' ? ArrowDown : ArrowUp} alt="Arrow Icon for Dropdown" />
+                                Features <img src={openDropDown === 'features' ? ArrowUp : ArrowDown} alt="Arrow Icon for Dropdown" />
                             </span>
                             {/* A nice way to add dropdown menus instead of adding an ::after pseudo element */}
                             {openDropDown === 'features' && (
@@ -49,7 +49,7 @@ function Nav() {
                         onMouseEnter={() => setDropDown('company')}
                         onMouseLeave={() => setDropDown(null)}>
                             <span className="dropdown-toggle">
-                                Company <img src={openDropDown === 'company' ? ArrowDown : ArrowUp} alt="Arrow Icon for Dropdown"/>
+                                Company <img src={openDropDown === 'company' ? ArrowUp : ArrowDown} alt="Arrow Icon for Dropdown"/>
                             </span>
                             {openDropDown === 'company' && (
                                 <div className="dropdown-menu">

@@ -5,7 +5,7 @@
     flex: 1;
     display: flex;
     padding: 1rem 7rem 3rem 11rem;
-    height: 100%;
+    width: 100%;
     gap: 5%;
 }
 
@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     width: 47%;
+    position: relative;
 }
 
 .left-content > h1 {
@@ -22,8 +23,24 @@
 }
 
 .left-content > p {
-    margin-top: 2rem;
+    margin-top: 3rem;
     color: var(--Medium-Gray);
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+.learn-btn {
+    cursor: pointer;
+    background-color: var(--Almost-Black);
+    color: var(--Almost-White);
+    font-size: 1rem;
+    margin-top: 3rem;
+    width: 31%;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
 }
 
 .company-ads {
