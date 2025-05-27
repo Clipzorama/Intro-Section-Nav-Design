@@ -4,7 +4,7 @@
 .content-container {
     flex: 1;
     display: flex;
-    padding: 1rem 7rem 3rem 11rem;
+    padding: 0.5rem 7rem 5rem 11rem;
     width: 100%;
     gap: 5%;
 }
@@ -26,7 +26,7 @@
     margin-top: 3rem;
     color: var(--Medium-Gray);
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     line-height: 2rem;
 }
 
@@ -41,12 +41,22 @@
     border: none;
     border-radius: 10px;
     font-weight: 500;
+    transition: 0.3s;
+}
+
+.learn-btn:hover {
+    background-color: var(--Almost-White);
+    color: var(--Almost-Black);
+    border: 1px solid var(--Almost-Black);
 }
 
 .company-ads {
+    position: absolute;
     display: flex;
     align-items: center;
     gap: 3rem;
+    left: 0;
+    bottom: 0;
 }
 
 /* Right Side is for the image. mostly just the img element. */
