@@ -30,7 +30,6 @@ function Nav() {
         <div className="nav-container">
             <img src={Logo} alt="Logo Symbol" className="logo" />
             <img className='hamburger-menu' onClick={() => setMobileView(!mobileView)} src={mobileView ? Close : Hamburger} alt="Hamburger Menu" />
-
             <div className="mobile-nav">
                 <div className="nav-left">
                     <ul className="nav-links">
