@@ -8,6 +8,10 @@
 
 /* Hamnurger Logic */
 
+.hamburger-menu {
+    display: none;
+}
+
 
 
 
@@ -92,5 +96,21 @@
 }
 
 @media screen and (max-width:450px) {
-    
+
+    /* Hamburger menu and nav-container logic */
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .nav-container {
+        padding: 1.5rem 1rem;
+        gap: 0rem;
+        justify-content: space-between;
+    }
+
 }
