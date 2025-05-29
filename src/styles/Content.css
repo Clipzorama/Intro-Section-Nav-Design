@@ -1,10 +1,9 @@
-
 /* Left side is for the rest of the content on the page */
 
 .content-container {
     flex: 1;
     display: flex;
-    padding: 0.5rem 7rem 5rem 11rem;
+    padding: 0.5rem 7rem 7rem 11rem;
     width: 100%;
     gap: 5%;
 }
@@ -16,18 +15,19 @@
     position: relative;
 }
 
-.left-content > h1 {
+.left-content>h1 {
     font-size: 5rem;
     color: var(--Almost-Black);
-    margin-top: 9rem;
+    margin-top: 8rem;
 }
 
-.left-content > p {
-    margin-top: 3rem;
+.left-content>p {
+    margin-top: 2rem;
     color: var(--Medium-Gray);
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 2rem;
+    padding-right: 1rem;
 }
 
 .learn-btn {
@@ -41,7 +41,7 @@
     border: none;
     border-radius: 10px;
     font-weight: 500;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .learn-btn:hover {
@@ -61,13 +61,14 @@
 
 /* Right Side is for the image. mostly just the img element. */
 .right-content {
-  width: 50%;
-  display: flex;
-  justify-content: center;
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
-.right-content > img {
-  width: 500px; /* Adjust this value */
-  height: auto;
-  object-fit: contain;
+.right-content>img {
+    width: 500px;
+    /* Adjust this value */
+    height: auto;
+    object-fit: contain;
 }
