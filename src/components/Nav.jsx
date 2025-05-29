@@ -14,20 +14,25 @@ import Planning from '../assets/images/icon-planning.svg'
 
 
 
+
 function Nav() {
 
     // setting to null here and depending on the feature im hovering ill change the state to abide the dropdown.
     const [openDropDown, setDropDown] = useState(null);
 
+    const [mobileView, setMobileView] = useState(false);
+    const [mobileDropdown, setMobileDropdown] = useState(false);
+
     return (
         <div className="nav-container">
             <img src={Logo} alt="Logo Symbol" className="logo" />
+
             <div className="mobile-nav">
                 <div className="nav-left">
                     <ul className="nav-links">
                         {/* Putting the whole feature dropDown in this one li element */}
                         <li className='dropdown-parent'
-                            // user hovers their mouse over the <li> element
+                            // user hovers their mouse over the <li> element. This changes the value of 'features' to enable the logic for it.
                             onMouseEnter={() => setDropDown('features')}
                             // Negation of this
                             onMouseLeave={() => setDropDown(null)}>
@@ -44,12 +49,12 @@ function Nav() {
                                 </div>
                             )}
                         </li>
-                        <li 
-                        className="dropdown-parent"
-                        onMouseEnter={() => setDropDown('company')}
-                        onMouseLeave={() => setDropDown(null)}>
+                        <li
+                            className="dropdown-parent"
+                            onMouseEnter={() => setDropDown('company')}
+                            onMouseLeave={() => setDropDown(null)}>
                             <span className="dropdown-toggle">
-                                Company <img src={openDropDown === 'company' ? ArrowUp : ArrowDown} alt="Arrow Icon for Dropdown"/>
+                                Company <img src={openDropDown === 'company' ? ArrowUp : ArrowDown} alt="Arrow Icon for Dropdown" />
                             </span>
                             {openDropDown === 'company' && (
                                 <div className="dropdown-menu">
@@ -68,6 +73,7 @@ function Nav() {
                     <button className="register-btn">Register</button>
                 </div>
             </div>
+
         </div>
     );
 }
