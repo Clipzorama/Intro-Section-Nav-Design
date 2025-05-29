@@ -6,6 +6,13 @@
     width: 100%;
 }
 
+/* Hamnurger Logic */
+
+
+
+
+
+/* ---------------------------------- */
 .mobile-nav {
     width: 100%;
     display: flex;
@@ -25,7 +32,7 @@
     gap: 3rem;
 }
 
-.nav-links > li {
+.nav-links>li {
     color: var(--Medium-Gray);
     font-weight: 500;
     cursor: pointer;
@@ -39,10 +46,10 @@
     background-color: white;
     padding: 2rem 1.5rem;
     margin-top: 1.2rem;
-    box-shadow: 0 8px 40px var(--Medium-Gray) ;
+    box-shadow: 0 8px 40px var(--Medium-Gray);
 }
 
-.dropdown-menu > div {
+.dropdown-menu>div {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -59,7 +66,7 @@
 
 }
 
-.nav-right > button {
+.nav-right>button {
     color: var(--Medium-Gray);
     cursor: pointer;
     font-size: 16px;
@@ -71,9 +78,9 @@
 }
 
 /* so i can hover on the li elements without modifying the color font in .dropdown-menu > div */
-.nav-links > li:hover > .dropdown-toggle,
-.nav-links > li:hover:not(.dropdown-parent),
-.nav-right > button:hover {
+.nav-links>li:hover>.dropdown-toggle,
+.nav-links>li:hover:not(.dropdown-parent),
+.nav-right>button:hover {
     color: var(--Almost-Black);
 }
 

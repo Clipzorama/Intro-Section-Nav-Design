@@ -11,6 +11,9 @@ import Calendar from '../assets/images/icon-calendar.svg'
 import Reminder from '../assets/images/icon-reminders.svg'
 import Planning from '../assets/images/icon-planning.svg'
 
+import Hamburger from '../assets/images/icon-menu.svg';
+import Close from '../assets/images/icon-close-menu.svg'
+
 
 
 
@@ -26,6 +29,7 @@ function Nav() {
     return (
         <div className="nav-container">
             <img src={Logo} alt="Logo Symbol" className="logo" />
+            <img className='hamburger-menu' onClick={() => setMobileView(!mobileView)} src={mobileView ? Close : Hamburger} alt="Hamburger Menu" />
 
             <div className="mobile-nav">
                 <div className="nav-left">
