@@ -1,6 +1,8 @@
 import '../styles/Content.css'
 
 import MainLogo from '../assets/images/image-hero-desktop.png'
+import MobileLogo from '../assets/images/image-hero-mobile.png'
+
 import Databiz from '../assets/images/client-databiz.svg'
 import Audiophile from '../assets/images/client-audiophile.svg'
 import Meet from '../assets/images/client-meet.svg'
@@ -24,7 +26,8 @@ function Content() {
                 </div>
             </div>
             <div className="right-content">
-                <img src={MainLogo} alt="Hero Logo" />
+                <img src={MainLogo} alt="Hero Logo" className="hero-pic" />
+                <img src={MobileLogo} alt="Mobile Hero Logo" className="mobile-hero" />
             </div>
         </div>
     );
