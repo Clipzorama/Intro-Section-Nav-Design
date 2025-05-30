@@ -33,7 +33,11 @@ function Nav() {
     return (
         <div className="nav-container">
             <img src={Logo} alt="Logo Symbol" className="logo" />
-            <img className='hamburger-menu' onClick={() => setMobileView(!mobileView)} src={mobileView ? Close : Hamburger} alt="Hamburger Menu" />
+            {/* I make the button disappear when i use the hidden class for this img element.*/}
+            <img className={`hamburger-menu ${mobileView ? 'hidden' : ''}`}
+             onClick={() => setMobileView(true)}
+              src={Hamburger} 
+              alt="Hamburger Menu" />
             <div className="mobile-nav">
                 <div className="nav-left">
                     <ul className="nav-links">
@@ -84,7 +88,10 @@ function Nav() {
             {/* mobile nav panel */}
             {mobileView && (
                 <div className="mobile-menu">
-                    
+                    <img src={Close} alt="" 
+                    className="close-btn" 
+                    onClick={() => setMobileView(false)} />
+
                 </div>
             )}
 
