@@ -127,6 +127,10 @@
         width: 65px;
     }
 
+    .company-ads > img:nth-of-type(2) {
+        width: 50px;
+    }
+
 
     /* image content */
 
