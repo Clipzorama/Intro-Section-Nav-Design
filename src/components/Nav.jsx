@@ -24,7 +24,11 @@ function Nav() {
     const [openDropDown, setDropDown] = useState(null);
 
     const [mobileView, setMobileView] = useState(false);
-    const [mobileDropdown, setMobileDropdown] = useState(false);
+    const [mobileDropdown, setMobileDropdown] = useState(null);
+
+    const toggleDown = (name) => {
+        setMobileDropdown((prev) => (prev === name ? null : name));
+    };
 
     return (
         <div className="nav-container">
@@ -76,6 +80,15 @@ function Nav() {
                     <button className="register-btn">Register</button>
                 </div>
             </div>
+
+            {/* mobile nav panel */}
+            {mobileView && (
+                <div className="mobile-menu">
+                    
+                </div>
+            )}
+
+
 
         </div>
     );
