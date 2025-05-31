@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import '../styles/Nav.css';
 
@@ -26,6 +26,17 @@ function Nav() {
     const [mobileView, setMobileView] = useState(false);
     const [navMobileDropdown, setNavMobileDropdown] = useState(null);
     const [cMobileDropdown, setCMobileDropdown] = useState(null);
+
+
+    // Adding useEffect so we can toggle the dimmed effect the user clicks on hamburger button
+
+    useEffect(() => {
+        if(mobileView) {
+            document.body.classList.add('dimmed');
+        } else {
+            document.body.classList.remove('dimmed');
+        }
+    }, [mobileView])
 
 
     return (

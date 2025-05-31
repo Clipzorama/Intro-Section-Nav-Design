@@ -139,6 +139,28 @@
         font-weight: 500;
     }
 
+    .mobile-dropdown-toggle {
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    .mobile-dropdown-toggle >img {
+        height: 100%;
+        align-self: center;
+    }
+
+    .dropdown-menu-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem 1rem;
+    }
+
+    .dropdown-menu-mobile > div {
+        display: flex;
+        gap: 1rem;
+    }
+
     .mobile-links > li:nth-of-type(1),
     .mobile-links > li:nth-of-type(2),
     .mobile-links > li:nth-of-type(3) {
