@@ -14,10 +14,6 @@ import Planning from '../assets/images/icon-planning.svg'
 import Hamburger from '../assets/images/icon-menu.svg';
 import Close from '../assets/images/icon-close-menu.svg'
 
-
-
-
-
 function Nav() {
 
     // setting to null here and depending on the feature im hovering ill change the state to abide the dropdown.
