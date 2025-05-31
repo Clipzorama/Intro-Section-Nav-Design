@@ -91,12 +91,39 @@ function Nav() {
                     <img src={Close} alt="" 
                     className="close-btn" 
                     onClick={() => setMobileView(false)} />
-
+                    <ul className="mobile-links">
+                        <li onClick={() => setMobileDropdown(mobileDropdown === 'features' ? null : 'features')}>
+                            <div className="mobile-dropdown-toggle">
+                                Features <img src={mobileDropdown  === 'features' ? ArrowUp : ArrowDown} alt="Arrow Icon for Dropdown" />
+                            </div>
+                            {mobileDropdown === 'features' && (
+                                <div className="dropdown-menu-mobile">
+                                    <div><img src={ToDo} alt="Todo Symbol" />Todo List</div>
+                                    <div><img src={Calendar} alt="Calendar Symbol" />Calendar</div>
+                                    <div><img src={Reminder} alt="Reminder Symbol" />Reminders</div>
+                                    <div><img src={Planning} alt="Planning Symbol" />Planning</div>
+                                </div>
+                            )}
+                        </li>
+                        <li onClick={() => setMobileDropdown(mobileDropdown === "company" ? null : "company")}>
+                            <div className="mobile-dropdown-toggle">
+                                Company <img src={mobileDropdown  === 'company' ? ArrowUp : ArrowDown} alt="Arrow Icon for Dropdown" />
+                            </div>
+                            {mobileDropdown === "company" && (
+                                <div className="dropdown-menu-mobile">
+                                    <div>History</div>
+                                    <div>Our Team</div>
+                                    <div>Blog</div>
+                                </div>
+                            )}
+                        </li>
+                        <li>Careers</li>
+                        <li>About</li>
+                        <button className="login-btn">Login</button>
+                        <button className="register-btn">Register</button>
+                    </ul>
                 </div>
             )}
-
-
-
         </div>
     );
 }
