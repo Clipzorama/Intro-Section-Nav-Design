@@ -21,6 +21,23 @@ body {
   min-height: 100vh;
 }
 
+/* Here im covering the entire boddy with the dim  */
+body.dimmed::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 998; /* under the mobile menu z-index */
+}
+
+/* enables scroll lock so user can focus more on the menu */
+body.dimmed {
+  overflow: hidden; 
+}
+
 .app-container {
   min-height: 100vh;
   display: flex;
