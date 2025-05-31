@@ -24,11 +24,9 @@ function Nav() {
     const [openDropDown, setDropDown] = useState(null);
 
     const [mobileView, setMobileView] = useState(false);
-    const [mobileDropdown, setMobileDropdown] = useState(null);
+    const [navMobileDropdown, setNavMobileDropdown] = useState(null);
+    const [cMobileDropdown, setCMobileDropdown] = useState(null);
 
-    const toggleDown = (name) => {
-        setMobileDropdown((prev) => (prev === name ? null : name));
-    };
 
     return (
         <div className="nav-container">
@@ -88,15 +86,18 @@ function Nav() {
             {/* mobile nav panel */}
             {mobileView && (
                 <div className="mobile-menu">
-                    <img src={Close} alt="" 
-                    className="close-btn" 
-                    onClick={() => setMobileView(false)} />
+                    <div className="mobile-image">
+                        <img src={Close} alt="" 
+                        className="close-btn" 
+                        onClick={() => setMobileView(false)} />
+                    </div>
+                   
                     <ul className="mobile-links">
-                        <li onClick={() => setMobileDropdown(mobileDropdown === 'features' ? null : 'features')}>
+                        <li onClick={() => setNavMobileDropdown(navMobileDropdown === 'features' ? null : 'features')}>
                             <div className="mobile-dropdown-toggle">
-                                Features <img src={mobileDropdown  === 'features' ? ArrowUp : ArrowDown} alt="Arrow Icon for Dropdown" />
+                                Features <img src={navMobileDropdown  === 'features' ? ArrowUp : ArrowDown} alt="Arrow Icon for Dropdown" />
                             </div>
-                            {mobileDropdown === 'features' && (
+                            {navMobileDropdown === 'features' && (
                                 <div className="dropdown-menu-mobile">
                                     <div><img src={ToDo} alt="Todo Symbol" />Todo List</div>
                                     <div><img src={Calendar} alt="Calendar Symbol" />Calendar</div>
@@ -105,11 +106,11 @@ function Nav() {
                                 </div>
                             )}
                         </li>
-                        <li onClick={() => setMobileDropdown(mobileDropdown === "company" ? null : "company")}>
+                        <li onClick={() => setCMobileDropdown(cMobileDropdown === "company" ? null : "company")}>
                             <div className="mobile-dropdown-toggle">
-                                Company <img src={mobileDropdown  === 'company' ? ArrowUp : ArrowDown} alt="Arrow Icon for Dropdown" />
+                                Company <img src={cMobileDropdown  === 'company' ? ArrowUp : ArrowDown} alt="Arrow Icon for Dropdown" />
                             </div>
-                            {mobileDropdown === "company" && (
+                            {cMobileDropdown === "company" && (
                                 <div className="dropdown-menu-mobile">
                                     <div>History</div>
                                     <div>Our Team</div>
@@ -119,8 +120,11 @@ function Nav() {
                         </li>
                         <li>Careers</li>
                         <li>About</li>
-                        <button className="login-btn">Login</button>
-                        <button className="register-btn">Register</button>
+                        <div className="mobile-buttons">
+                            <button className="lb">Login</button>
+                            <button className="rb">Register</button>
+                        </div>
+                       
                     </ul>
                 </div>
             )}
